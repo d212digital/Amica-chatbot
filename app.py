@@ -2,8 +2,6 @@ from flask import Flask, request, session
 from twilio.twiml.messaging_response import MessagingResponse
 from amicabot import ask, append_interaction_to_chat_log
 
-PYTHON_VERSION = 3.8
-
 app = Flask(__name__)
 # if for some reason your conversation with Amica gets weird, change the secret key
 app.config['SECRET_KEY'] = 'any-random-string'
@@ -22,3 +20,4 @@ def jabe():
 
 if __name__ =='__main__':
  app.run(debug=True)
+ 
