@@ -1,4 +1,3 @@
-from sysconfig import get_python_version
 from dotenv import load_dotenv
 from random import choice
 from flask import Flask, request
@@ -6,7 +5,7 @@ from flask import Flask, request
 import os
 import openai
 
-python_version = get_python_version
+PYTHON_VERSION = 3.8
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 completion = openai.Completion()
