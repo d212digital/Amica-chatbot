@@ -5,7 +5,13 @@ from flask import Flask, request
 import os
 import openai
 
-PYTHON_VERSION = 3.8
+# Set environment variables
+os.environ['PYTHON_VERSION'] = '3.8.5'
+
+
+# Get environment variables
+ENV = os.getenv('PYTHON_VERSION')
+
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 completion = openai.Completion()
