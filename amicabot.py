@@ -6,7 +6,6 @@ import os
 import openai
 
 load_dotenv()
-python_version = os.getenv('PYTHON_VERSION')
 openai.api_key = os.getenv("OPENAI_API_KEY")
 completion = openai.Completion()
 
